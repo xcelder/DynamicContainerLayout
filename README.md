@@ -1,5 +1,5 @@
 # DynamicContainerLayout
-Android Layout that can contains as much view as you want and switch bewteen them
+Android Layout that can contain as many view as you want and switch bewteen them
 
 ## Demo
 
