@@ -1,13 +1,13 @@
 # DynamicContainerLayout
 Android Layout that can contains as much view as you want and switch bewteen them
 
-##Demo
+## Demo
 
 <img src="https://github.com/xcelder/DynamicContainerLayout/blob/master/files/insta.gif"/>
 
-##How to use?
+## How to use?
 
-###XML
+### XML
 ```xml
 <com.xcelder.dynamiccontainerlayout.views.DynamicContainerLayout
         android:id="@+id/dyn_container"
@@ -31,7 +31,7 @@ Android Layout that can contains as much view as you want and switch bewteen the
     </com.xcelder.dynamiccontainerlayout.views.DynamicContainerLayout>
 ```
 
-###Code
+### Code
 
 ```java
 public class MainActivity extends AppCompatActivity {
