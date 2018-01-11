@@ -42,6 +42,7 @@ public class DynamicContainerLayout extends RelativeLayout {
     private void init(Context context) {
         this.mContext = context;
 
+        isInner = true;
         post(onCreateView);
     }
 
@@ -52,6 +53,22 @@ public class DynamicContainerLayout extends RelativeLayout {
                 inflateViewByIndex(0);
         }
     };
+
+    boolean isInner = false;
+    @Override
+    public boolean post(final Runnable action) {
+        if (isInner) {
+            isInner = false;
+            return super.post(action);
+        } else {
+            return postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    DynamicContainerLayout.super.post(action);
+                }
+            },1);
+        }
+    }
 
     public void inflateViewByIndex(final int index) {
         currentIndex = index;
